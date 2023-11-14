@@ -1,5 +1,3 @@
-/*execution for built-in and non built-in functions*/
-
 #include "shell.h"
 
 /**

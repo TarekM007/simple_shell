@@ -18,7 +18,7 @@ if (!tokens)
   fprintf(stderr, "allocation error in split_line: tokens\n");
   exit(EXIT_FAILURE);
  }
- token = strtok(line, TOK_DELIM);
+ token = strtok(line, DELIM);
  while (token != NULL)
  {
   /* handle comments */
@@ -38,7 +38,7 @@ if (!tokens)
     exit(EXIT_FAILURE);
    }
   }
-  token = strtok(NULL, TOK_DELIM);
+  token = strtok(NULL, DELIM);
  }
  tokens[i] = NULL;
  return (tokens);
