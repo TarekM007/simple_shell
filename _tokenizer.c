@@ -8,10 +8,10 @@
  */
 char **_tokenizer(char *line)
 {
-int bufsize = 64;
-int i = 0;
+int bufsize = 128;
 char **tokens = malloc(bufsize * sizeof(char *));
 char *token;
+int i = 0;
 
 if (!tokens)
 {

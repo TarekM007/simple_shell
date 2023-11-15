@@ -19,13 +19,13 @@ if (pid ==  0)
 {
 if (execvp(args[0], args) == -1)
 {
-perror("error in new_process: child process");
+perror("error in execute_args: child process");
 }
 exit(EXIT_FAILURE);
 }
 else if (pid < 0)
 {
-perror("error in new_process: forking");
+perror("error in execute_args: forking");
 }
 else
 {

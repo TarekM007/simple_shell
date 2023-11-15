@@ -10,7 +10,7 @@ char *read_lines(void)
 int bufsize = 1024;
 int i = 0;
 char *line = malloc(sizeof(char) * bufsize);
-int character;
+int ch;
 
 if (line == NULL)
 {
@@ -19,20 +19,20 @@ exit(EXIT_FAILURE);
 }
 while (1)
 {
-character = getchar();
-if (character == EOF)
+ch = getchar();
+if (ch == EOF)
 {
 free(line);
 exit(EXIT_SUCCESS);
 }
-else if (character == '\n')
+else if (ch == '\n')
 {
 line[i] = '\0';
 return (line);
 }
 else
 {
-line[i] = character;
+line[i] = ch;
 }
 i++;
 if (i >= bufsize)
