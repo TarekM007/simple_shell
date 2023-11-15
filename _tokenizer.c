@@ -30,7 +30,7 @@ i++;
 if (i >= bufsize)
 {
 bufsize += bufsize;
-tokens = realloc(tokens, bufsize * sizeof(char *));
+tokens = realloc(tokens, bufsize *sizeof(char *));
 if (!tokens)
 {
 perror("reallocation error in _tokenizer: tokens");
